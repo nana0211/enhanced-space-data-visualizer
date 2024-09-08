@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100% !important;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.app-container {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+.left-panel, .right-panel {
+  transition: all 0.3s ease-in-out;
+}
+
+.left-panel {
+  width: 50%;
+  background-color: #f97316;
+  padding: 48px;
+}
+
+.right-panel {
+  width: 50%;
+  background-color: white;
+  padding: 48px;
+}
+
+.app-container.expanded .left-panel {
+  width: 33.33%;
+}
+
+.app-container.expanded .right-panel {
+  width: 66.67%;
+}
+
+.left-panel > *, .right-panel > * {
+  transition: all 0.5s ease-in-out;
+}
+
+.app-container.expanded .left-panel > * {
+  transform: scale(0.8);
+}
+
+.app-container.expanded .right-panel > * {
+  transform: scale(1.2);
+}
+
+/* Add any additional styling as needed */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
